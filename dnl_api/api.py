@@ -27,16 +27,6 @@ async def get_products(
 ) -> List[dict]:
     """
     Retrieve a list of products from the database, based on different query parameters.
-
-    Args:
-        model: the name of the model.
-        category: the name of the category.
-        make: the name of the make.
-        part_number: the part number.
-        part_type: the part type.
-
-    Returns:
-        A list of dictionaries (products).
     """
     # Constructing the filter based on provided query parameters
     filter_query = {}
