@@ -9,23 +9,6 @@ eliminated most of the boilerplate associated with a task like this.
 
 The structure of the "urparts" website informed the traversal algorithm to naturally mimic DFS.
 
-## Project structure
-
-```
-dnl/
-    dnl_api/ # code for the fastapi
-        Dockerfile
-        requirements.txt
-        ...
-    dnl_scraper/ # code for the scraper
-        Dockerfile
-        requirements.txt
-        ...
-    FOREWORD.md # some details about the homework
-    README.md # read this to start containers
-    ...
-```
-
 ## Assumptions made
 
 I started this task by assuming that the functionality of the crawler is fully defined by the provided

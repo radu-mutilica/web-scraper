@@ -11,6 +11,29 @@ of their product inventory. All products scraped are then stored in a MongoDB in
 3. The FastAPI endpoint will already be up and running and query-able. It will serve
 incomplete data though, until the scraper finishes and exits.
 
+## Project structure
+The code is structured in two separate projects:
+
+```
+dnl/
+    dnl_api/ # code for the fastapi
+        Dockerfile
+        requirements.txt
+        ...
+    dnl_scraper/ # code for the scraper
+        Dockerfile
+        requirements.txt
+        ...
+    FOREWORD.md # some details about the homework
+    README.md # read this to start containers
+    compose.yaml
+    ...
+```
+
+- dnl_api: python project containing the API code.
+- dnl_scraper: python project containing the scraper code.
+- compose.yaml: at top-level to deploy the two different projects.
+
 ## Running the app
 When you're ready, start your application by running:
 
