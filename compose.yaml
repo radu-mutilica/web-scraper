@@ -1,0 +1,28 @@
+networks:
+  dnl-network:
+    driver: bridge
+
+services:
+  dnl_scraper:
+    build: ./dnl_scraper
+    command: scrapy runspider scraper.py
+    networks:
+      - dnl-network
+
+  dnl_api:
+    container_name: products-api
+    build: ./dnl_api
+    command: uvicorn api:app --reload --host 0.0.0.0
+    ports:
+      - 8000:8000
+    networks:
+      - dnl-network
+
+  mongodb:
+    image: mongo
+    ports:
+      - 27017:27017
+    networks:
+      - dnl-network
+
+

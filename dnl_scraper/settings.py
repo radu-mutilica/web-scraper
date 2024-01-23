@@ -1,0 +1,9 @@
+ITEM_PIPELINES = {
+    "pipelines.MongoPipeline": 1,
+}
+
+MONGODB_SERVER = "mongodb"
+MONGODB_PORT = 27017
+MONGODB_DB = "spider"
+MONGODB_COLLECTION = "scraped"
+CONCURRENT_REQUESTS = 10
