@@ -42,3 +42,9 @@ duplicate items. I left it as such because I was torn between two designs:
   - have each subsequent scrape use a new collection (that way we keep historical data)
   - use just one collection but index all items uniquely, and change the scraper to do an upsert to
 the database instead of an insert.
+- testing: out of the three separate services (database, scraper, api), for this scenario, only the
+scraper has a resemblance of actual business logic in it, the API is purely boilerplate which
+returns mostly raw data. In my experience, testing web scrapers is a can of worms. What we used
+to do was mock the requests library to return cached versions of the HTML documents in question.
+This mostly served to increase code coverage in my opinion, as the constant changes in website 
+HTML bodies made the tests useless in the long run.
