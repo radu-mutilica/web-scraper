@@ -1,4 +1,4 @@
-# Deep Neuron Lab Backend Challenge
+# Simple web scraper
 
 ## About
 This is a docker containerized application running in three separate docker containers.
